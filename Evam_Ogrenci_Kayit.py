@@ -75,11 +75,11 @@ def update():
 
     elif upd_selection == 2:
         stu_name = input("Student name to update:")
-        old_stu_file = open("data.txt","r") # eski dosyayı okuyoruz
-        new_stu_file = open("new.txt","w") # yeni dosyaya yazıyoruz
+        old_stu_file = open("data.txt","r")
+        new_stu_file = open("new.txt","w")
         for k in old_stu_file:
-            lines = k.split("\t") # arasında tab olan kelimeleri ayırıyoruz. ve j ile bu kelimeleri bir bir alıyoruz.
-            if lines[1].strip() == stu_name.strip(): # eski dosyadaki no ile güncellenmek istenilen no aynı ise şunları yap.
+            lines = k.split("\t")
+            if lines[1].strip() == stu_name.strip():
                 new_stu_name = input("New student name:")
                 new_stu_file.write(lines[0] + "\t" + new_stu_name + "\t" + lines[2])
                 print("Update completed")
@@ -93,11 +93,11 @@ def update():
 
     elif upd_selection == 3:
         stu_surname = input("Student surname to update:")
-        old_stu_file = open("data.txt","r") # eski dosyayı okuyoruz
-        new_stu_file = open("new.txt","w") # yeni dosyaya yazıyoruz
+        old_stu_file = open("data.txt","r")
+        new_stu_file = open("new.txt","w")
         for l in old_stu_file:
-            lines = l.split("\t") # arasında tab olan kelimeleri ayırıyoruz. ve j ile bu kelimeleri bir bir alıyoruz.
-            if lines[2].strip() == stu_surname.strip(): # eski dosyadaki no ile güncellenmek istenilen no aynı ise şunları yap.
+            lines = l.split("\t")
+            if lines[2].strip() == stu_surname.strip():
                 new_stu_surname = input("New student surname:")
                 new_stu_file.write(lines[0] + "\t" + lines[1] + "\t" + new_stu_surname)
                 print("Update completed")
